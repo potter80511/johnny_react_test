@@ -1,5 +1,6 @@
 import Input from '../../components/Input'
 import Button from '../../components/Button'
+import Select from '../../components/Right/Select'
 
 function Dashboard({
   isLogin,
@@ -9,9 +10,7 @@ function Dashboard({
   password,
   setPassword
 }) {
-  return isLogin ? <div>
-    select
-    </div>
+  return isLogin ? <Select />
   : <div>
       <Input label="帳號:" value={account} onChange={setAccount} />
       <Input label="密碼:" value={password} onChange={setPassword} type="password" />
