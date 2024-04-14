@@ -1,11 +1,14 @@
-import { useState } from 'react';
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 
-function Dashboard({isLogin, onSubmitLogin}) {
-  const [account, setAccount] = useState('')
-  const [password, setPassword] = useState('')
-
+function Dashboard({
+  isLogin,
+  onSubmitLogin,
+  account,
+  setAccount,
+  password,
+  setPassword
+}) {
   return isLogin ? <div>
     select
     </div>
