@@ -3,7 +3,7 @@ import Button from "../../Button"
 import "./Select.css"
 
 function Select({account, password}) {
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [tabindex, setTabIndex] = useState(null)
 
   const contentDisplay = useMemo(() => {
