@@ -17,7 +17,7 @@ function Right({
   return (
     <div className="Right">
       <Routes>
-        <Route exact path="/" element={<div>Company</div>}/>
+        <Route exact path="/" element={<div>Company Infomation</div>}/>
         <Route
           exact
           path="/dashboard"
