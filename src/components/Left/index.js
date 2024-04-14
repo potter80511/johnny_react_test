@@ -1,10 +1,11 @@
 import './Left.css';
 import Button from '../Button'
 
-function Left() {
+function Left({isLogin}) {
+  const loginText = isLogin ? "登出" : "登入"
   return (
     <div className="Left">
-		  <Button text="登入" backgroundColor="blue" />
+		  <Button text={loginText} backgroundColor="blue" />
 		  <Button text="首頁" backgroundColor="green"/>
 	  </div>
   );
