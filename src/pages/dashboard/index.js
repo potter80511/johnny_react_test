@@ -10,7 +10,7 @@ function Dashboard({
   password,
   setPassword
 }) {
-  return isLogin ? <Select />
+  return isLogin ? <Select account={account} password={password} />
   : <div>
       <Input label="帳號:" value={account} onChange={setAccount} />
       <Input label="密碼:" value={password} onChange={setPassword} type="password" />

@@ -23,12 +23,15 @@
   border-color: transparent #333 #333 transparent;
   position: absolute;
   right: 8px;
-  top: 4px;
+  top: 8px;
   transform: rotate(45deg);
 }
-.Select .menu {
+.Select .tabs {
   display: flex;
+  justify-content: center;
   gap: 8px;
+}
+.Select .menu {
   position: absolute;
   left: 0;
   top: 100%;
