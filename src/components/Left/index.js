@@ -1,10 +1,12 @@
 import './Left.css';
+import Button from '../Button'
 
 function Left() {
   return (
     <div className="Left">
-		Left
-	</div>
+		  <Button text="登入" backgroundColor="blue" />
+		  <Button text="首頁" backgroundColor="green"/>
+	  </div>
   );
 }
 
