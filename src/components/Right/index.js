@@ -1,22 +1,19 @@
-import { useState } from 'react';
+
 import './Right.css';
-import Input from '../Input'
-import Button from '../Button'
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Dashboard from "../../pages/dashboard"
 
 function Right({isLogin, onSubmitLogin}) {
-  const [account, setAccount] = useState('')
-  const [password, setPassword] = useState('')
-  
   return (
     <div className="Right">
-      {isLogin ? <div>
-        select
-        </div>
-      : <div>
-          <Input label="帳號:" value={account} onChange={setAccount} />
-          <Input label="密碼:" value={password} onChange={setPassword} type="password" />
-          <Button text="登入" onClick={() => account && password && onSubmitLogin()} backgroundColor="blue" />
-        </div>}
+      <Routes>
+        <Route exact path="/" element={<div>Company</div>}/>
+        <Route exact path="/dashboard" element={<Dashboard isLogin={isLogin} onSubmitLogin={onSubmitLogin} />}/>
+      </Routes>
+      
 	  </div>
   );
 }
