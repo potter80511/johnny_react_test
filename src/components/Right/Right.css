@@ -3,9 +3,5 @@
   float: left;
   width: 85%;
   height: 100%;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 1px solid black;
-  border-right: 2px solid black;
   padding: 32px;
 }
