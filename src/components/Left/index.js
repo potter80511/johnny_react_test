@@ -1,25 +1,29 @@
 import './Left.css';
 import Button from '../Button'
-import { useNavigate } from "react-router-dom";
+import Link from "../Link";
 
-function Left({isLogin, onLogout}) {
-  const navigate = useNavigate();
-  const loginText = isLogin ? "登出" : "登入"
+function Left({isLogin}) {
+  const handleLogout = () => {}
+
   return (
     <div className="Left">
-		  <Button
-        text={loginText}
-        backgroundColor="blue"
-        onClick={() => {
-          if(isLogin) {
-            onLogout()
-            navigate("/login")
-          } else {
-            navigate("/dashboard")
-          }
-        }}
-      />
-		  <Button text="首頁" backgroundColor="green" onClick={() => navigate("/")} />
+      <div className='nav'>
+        <Link href="/">
+          <span>Home</span>
+        </Link>
+        {isLogin && <Link href="/dashboard">
+          <span>Dashboard</span>
+        </Link>}
+      </div>
+      {isLogin ?
+        <Button
+          text="Log out"
+          backgroundColor="orange"
+          onClick={handleLogout}
+        /> : <Link href="/login">
+          <span>Login</span>
+        </Link>
+      }
 	  </div>
   );
 }

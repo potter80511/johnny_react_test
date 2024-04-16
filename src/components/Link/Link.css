@@ -1,0 +1,12 @@
+.Link {
+  display: block;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+}
+.Link:hover {
+  opacity: 0.8;
+  transition: all .3s;
+}

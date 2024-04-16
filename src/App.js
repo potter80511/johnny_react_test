@@ -9,16 +9,10 @@ function App() {
   const [account, setAccount] = useState('')
   const [password, setPassword] = useState('')
 
-  const onLogout = () => {
-    setIsLogin(false)
-    setAccount("")
-    setPassword("")
-  }
-
   return (
     <div className="App">
       <BrowserRouter>
-        <Left isLogin={isLogin} onLogout={onLogout} />
+        <Left isLogin={isLogin} />
         <Right
           isLogin={isLogin}
           onSubmitLogin={() => setIsLogin(true)}
