@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Dashboard from "../../pages/dashboard"
+import Home from "../../pages/home"
 
 function Right({
   isLogin,
@@ -17,7 +18,7 @@ function Right({
   return (
     <div className="Right">
       <Routes>
-        <Route exact path="/" element={<div>Company Infomation</div>}/>
+        <Route exact path="/" element={<Home/>}/>
         <Route
           exact
           path="/dashboard"
