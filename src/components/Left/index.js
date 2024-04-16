@@ -13,8 +13,10 @@ function Left({isLogin, onLogout}) {
         onClick={() => {
           if(isLogin) {
             onLogout()
+            navigate("/login")
+          } else {
+            navigate("/dashboard")
           }
-          navigate("/dashboard")
         }}
       />
 		  <Button text="首頁" backgroundColor="green" onClick={() => navigate("/")} />
