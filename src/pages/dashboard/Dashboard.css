@@ -66,9 +66,11 @@
   font-size: 16px;
   position: relative;
   padding: 8px;
+  width: 200px;
+  transition: all .3s;
 }
-.tabs .tab:not(:last-child) {
-  margin-right: 8px;
+.tabs .tab:hover {
+  background: #eee;
 }
 .tabs .tab:after {
   content: '';
