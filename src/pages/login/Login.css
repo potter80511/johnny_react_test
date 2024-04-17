@@ -1,0 +1,11 @@
+.Login {
+  border-radius: 8px;
+  box-shadow: 0 0 5px #aaa;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  padding-bottom: 40px;
+}
+.Login h2 {
+  color: #555;
+}

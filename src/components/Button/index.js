@@ -5,9 +5,10 @@ function Button({
   color = "#fff",
   backgroundColor,
   onClick,
+  width,
 }) {
   return (
-    <button className="Button" type="button" style={{ color, backgroundColor }} onClick={onClick}>
+    <button className="Button" type="button" style={{ color, backgroundColor, width }} onClick={onClick}>
 		  {text}
 	  </button>
   );

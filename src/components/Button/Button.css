@@ -4,6 +4,7 @@
   border-radius: 3px;
   color: #fff;
   padding: 8px;
+  font-size: 16px;
 }
 .Button:hover {
   opacity: 0.8;
