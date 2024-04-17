@@ -14,7 +14,7 @@
   transition: all .3s;
 }
 .Select.open .head {
-  border-color: #1976d2;
+  border-color: #8cbbea;
 }
 .Select .head:hover {
   background-color: #eee;
@@ -46,6 +46,7 @@
   height: 300px;
   display: flex;
   flex-direction: column;
+  padding: 16px;
 }
 .Select .menu .content {
   display: flex;
@@ -56,4 +57,29 @@
 .Select .menu .content h2 {
   font-size: 30px;
   color: #888;
+}
+
+.tabs .tab {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+  position: relative;
+  padding: 8px;
+}
+.tabs .tab:not(:last-child) {
+  margin-right: 8px;
+}
+.tabs .tab:after {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: all .3s;
+  background-color: #1976d2;
+}
+.tabs .tab.active::after {
+  width: 100%;
 }

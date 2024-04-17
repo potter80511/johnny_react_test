@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
-import Button from "../../components/Button"
 import "./Dashboard.css"
 import AccountInfo from './AccountInfo.js';
+import Tabs from './Tabs';
 
 function Dashboard() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -26,10 +26,11 @@ function Dashboard() {
       Select
     </div>
     {isMenuOpen && <div className="menu">
-      <div className="tabs">
+      <Tabs activeIndex={tabindex} onClickTab={(newIndex) => setTabIndex(newIndex)} />
+      {/* <div className="tabs">
         <Button text="Version" onClick={() => setTabIndex(0)} backgroundColor="pink" />
         <Button text="AccountInfo" onClick={() => setTabIndex(1)} backgroundColor="pink" />
-      </div>
+      </div> */}
       <div className="content">
         {contentDisplay}
       </div>
