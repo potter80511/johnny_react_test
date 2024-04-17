@@ -1,12 +1,15 @@
 .Link {
   display: block;
   border-radius: 3px;
-  background-color: #1976d2;
-  color: #fff;
+  background-color: #ddd;
+  color: #888;
+  font-weight: bold;
   text-decoration: none;
   padding: 8px;
-}
-.Link:hover {
   transition: all .3s;
-  background-color: #1565c0;
+}
+
+.Link:hover, .Link.active {
+  background-color: #1976d2;
+  color: #fff;
 }

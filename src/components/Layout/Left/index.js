@@ -3,8 +3,11 @@ import Button from '../../Button'
 import Link from "../../Link";
 import { LoginDataContext } from '../../../hooks/useUser.js'
 import { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Left() {
+  const { pathname } = useLocation();
+
   const { loginData, setLoginData } = useContext(LoginDataContext)
   const isLogin = !!loginData
 
@@ -15,10 +18,10 @@ function Left() {
   return (
     <div className="Left">
       <div className='nav'>
-        <Link href="/">
+        <Link href="/" active={pathname === '/'}>
           <span>Home</span>
         </Link>
-        {isLogin && <Link href="/dashboard">
+        {isLogin && <Link href="/dashboard" active={pathname === '/dashboard'}>
           <span>Dashboard</span>
         </Link>}
       </div>
@@ -27,7 +30,7 @@ function Left() {
           text="Log out"
           backgroundColor="orange"
           onClick={handleLogout}
-        /> : <Link href="/login">
+        /> : <Link href="/login" active={pathname === '/login'}>
           <span>Login</span>
         </Link>
       }
