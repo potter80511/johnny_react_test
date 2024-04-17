@@ -1,7 +1,10 @@
 .Button {
   cursor: pointer;
   border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 8px;
 }
 .Button:hover {
-  opacity: 0.6;
+  opacity: 0.8;
 }

@@ -9,3 +9,7 @@
   padding: 32px;
   box-shadow: 2px 0 3px rgba(64,64,64,.3);
 }
+
+.Left .nav a:not(:last-child) {
+  margin-bottom: 16px;
+}
