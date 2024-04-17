@@ -83,3 +83,21 @@
 .tabs .tab.active::after {
   width: 100%;
 }
+
+.account-info {
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+  width: 300px;
+}
+.account-info .field {
+  margin-bottom: 8px;
+}
+.account-info .label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.account-info .value {
+  background-color: #eee;
+  padding: 8px 16px;
+}
