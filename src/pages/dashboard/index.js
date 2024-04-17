@@ -13,13 +13,15 @@ function Dashboard() {
     }
 
     if(tabindex === 0) {
-      return "version: 1.0.2"
+      return <h2>Version: 1.0.2</h2>
     }
 
     return <AccountInfo />
   }, [tabindex])
 
-  return <div className="Select">
+  const openClass = isMenuOpen ? ' open' : ''
+
+  return <div className={`Select${openClass}`}>
     <div className="head" onClick={() => setIsMenuOpen(!isMenuOpen)}>
       Select
     </div>
