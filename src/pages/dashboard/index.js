@@ -1,11 +1,9 @@
-import { useContext, useState, useMemo } from 'react';
-import { LoginDataContext } from '../../hooks/useUser.js'
+import { useState, useMemo } from 'react';
 import Button from "../../components/Button"
 import "./Dashboard.css"
+import AccountInfo from './AccountInfo.js';
 
 function Dashboard() {
-  const { loginData } = useContext(LoginDataContext)
-
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [tabindex, setTabIndex] = useState(null)
 
@@ -18,11 +16,8 @@ function Dashboard() {
       return "version: 1.0.2"
     }
 
-    return <div className="account-info">
-      <div>account: {loginData.account}</div>
-      <div>password: {loginData.password}</div>
-    </div>
-  }, [tabindex, loginData])
+    return <AccountInfo />
+  }, [tabindex])
 
   return <div className="Select">
     <div className="head" onClick={() => setIsMenuOpen(!isMenuOpen)}>
