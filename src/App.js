@@ -1,5 +1,5 @@
-import Left from './components/Left'
-import Right from './components/Right';
+import Left from './components/Layout/Left'
+import Right from './components/Layout/Right';
 import './App.css';
 import { useState } from 'react';
 import { BrowserRouter } from "react-router-dom";

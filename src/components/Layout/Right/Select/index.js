@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import Button from "../../Button"
+import Button from "../../../Button"
 import "./Select.css"
 
 function Select({account, password}) {

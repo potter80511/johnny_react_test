@@ -1,7 +1,7 @@
 import './Left.css';
-import Button from '../Button'
-import Link from "../Link";
-import { LoginDataContext } from '../../hooks/useUser.js'
+import Button from '../../Button'
+import Link from "../../Link";
+import { LoginDataContext } from '../../../hooks/useUser.js'
 import { useContext } from 'react';
 
 function Left() {

@@ -5,11 +5,11 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import Dashboard from "../../pages/dashboard"
-import Home from "../../pages/home"
-import Login from "../../pages/login"
+import Dashboard from "../../../pages/dashboard"
+import Home from "../../../pages/home"
+import Login from "../../../pages/login"
 import { useContext } from 'react';
-import { LoginDataContext } from '../../hooks/useUser.js'
+import { LoginDataContext } from '../../../hooks/useUser.js'
 
 function Right() {
   const { loginData } = useContext(LoginDataContext)

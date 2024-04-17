@@ -1,4 +1,4 @@
-import Select from '../../components/Right/Select'
+import Select from '../../components/Layout/Right/Select'
 import { useContext } from 'react';
 import { LoginDataContext } from '../../hooks/useUser.js'
 
