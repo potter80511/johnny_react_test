@@ -1,9 +1,16 @@
 import './Left.css';
 import Button from '../Button'
 import Link from "../Link";
+import { LoginDataContext } from '../../hooks/useUser.js'
+import { useContext } from 'react';
 
-function Left({isLogin}) {
-  const handleLogout = () => {}
+function Left() {
+  const { loginData, setLoginData } = useContext(LoginDataContext)
+  const isLogin = !!loginData
+
+  const handleLogout = () => {
+    setLoginData(null)
+  }
 
   return (
     <div className="Left">

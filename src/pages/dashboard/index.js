@@ -1,21 +1,11 @@
-import Input from '../../components/Input'
-import Button from '../../components/Button'
 import Select from '../../components/Right/Select'
+import { useContext } from 'react';
+import { LoginDataContext } from '../../hooks/useUser.js'
 
-function Dashboard({
-  isLogin,
-  onSubmitLogin,
-  account,
-  setAccount,
-  password,
-  setPassword
-}) {
-  return isLogin ? <Select account={account} password={password} />
-  : <div>
-      <Input label="帳號:" value={account} onChange={setAccount} />
-      <Input label="密碼:" value={password} onChange={setPassword} type="password" />
-      <Button text="登入" onClick={() => account && password && onSubmitLogin()} backgroundColor="blue" />
-    </div>
+function Dashboard() {
+  const { loginData } = useContext(LoginDataContext)
+
+  return <Select account={loginData.account} password={loginData.password} />
 }
 
 export default Dashboard
